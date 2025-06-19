@@ -30,13 +30,19 @@ To load the data correctly, you first need to download the complete data from th
 
 data/
 ├── img_move.py
+
 ├── train/
+
 │   ├── img...   
 │       
 ├── test/
+
 │   ├── img...
+
 │ 
+
 ├── imgs_move.py(Copy it from the main folder)      
+
 ├── names.csv
 ├── train_labels.csv
 └── test_labels.csv
