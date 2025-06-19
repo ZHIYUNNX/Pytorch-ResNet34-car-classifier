@@ -29,6 +29,7 @@ Please ensure that the following files are in the same directory:
 To load the data correctly, you first need to download the complete data from the above dataset link, and then extract the file and adjust it to the following file structure
 
 data/
+
 ├── img_move.py
 
 ├── train/
@@ -44,7 +45,9 @@ data/
 ├── imgs_move.py(Copy it from the main folder)      
 
 ├── names.csv
+
 ├── train_labels.csv
+
 └── test_labels.csv
 
 And then run imgs_move.py
@@ -103,16 +106,25 @@ TensorBoard 2.19.0
 为了正确加载数据，你首先需要从上面数据集链接下载完整的数据，然后将文件解压，调整成以下的文件结构
 
 data/
+
 ├── img_move.py
+
 ├── train/
+
 │   ├── img...   
 │       
 ├── test/
+
 │   ├── img...
+
 │ 
-├── imgs_move.py(将其从主文件夹中复制过来)      
+
+├── imgs_move.py(Copy it from the main folder)      
+
 ├── names.csv
+
 ├── train_labels.csv
+
 └── test_labels.csv
 
 然后运行imgs_move.py
