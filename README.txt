@@ -1,3 +1,6 @@
+# Pytorch-ResNet34-car-classifier
+course_task
+
 # README
 
 ## Task Category
@@ -23,14 +26,30 @@ Please ensure that the following files are in the same directory:
 - `test.py`
 - `data/`
 
-To load the data correctly, you need to modify the `root_dir` variable in `train.py` and `test.py`. Replace:
+To load the data correctly, you first need to download the complete data from the above dataset link, and then extract the file and adjust it to the following file structure
+data/
+├── img_move.py
+├── train/
+│   ├── img...   
+│       
+├── test/
+│   ├── img...
+│ 
+├── imgs_move.py(Copy it from the main folder)      
+├── names.csv
+├── train_labels.csv
+└── test_labels.csv
+
+And then run imgs_move.py
+
+you also need to modify the `root_dir` variable in `train.py` and `test.py`. Replace:
 root_dir = r'E:\Learning_materials\AI_Project\AI_Course\Task\Car_Project_2\data'
 with:
 root_dir = r'the current path on your computer'
 
 In the weights/ folder, there are different weights, including those for ResNet34 and VGG11_bn. resnet34_stanfordcars.pth and last_epoch.pth are the trained weights and the weights saved from the last epoch, respectively. If you want to load other weights, please modify the load_path variable in train.py and test.py to the path of your desired weight.
 Testing
-The result returned by the test program is the accuracy of the test set. If you want to test specific images, please place the images in the inputs/ folder and uncomment the "single test" section in test.py.
+The result returned by the test program is the accuracy of the test set. If you want to test specific images, please place the images in the inputs/ folder(If it doesn't exist, please create one) and uncomment the "single test" section in test.py.
 Running Environment
 Operating System
 Windows 11
@@ -74,13 +93,29 @@ TensorBoard 2.19.0
 - `test.py`
 - `data/`
 
-为了正确加载数据，你需要修改`train.py`和`test.py`中的`root_dir`变量。将：
+为了正确加载数据，你首先需要从上面数据集链接下载完整的数据，然后将文件解压，调整成以下的文件结构
+data/
+├── img_move.py
+├── train/
+│   ├── img...   
+│       
+├── test/
+│   ├── img...
+│ 
+├── imgs_move.py(将其从主文件夹中复制过来)      
+├── names.csv
+├── train_labels.csv
+└── test_labels.csv
+
+然后运行imgs_move.py
+
+你还需要修改`train.py`和`test.py`中的`root_dir`变量。将：
 root_dir = r'E:\Learning_materials\AI_Project\AI_Course\Task\Car_Project_2\data'
 替换为：
 root_dir = r'你电脑上的当前路径'
 在weights/文件夹中，有不同模型的权重，包括ResNet34和VGG11_bn的权重。resnet34_stanfordcars.pth和last_epoch.pth分别是训练好的权重和最后一个训练周期保存的权重。如果你想加载其他权重，请修改train.py和test.py中的load_path变量为你想要加载的权重路径。
 测试
-测试程序返回的结果是测试集的准确率。如果你想测试特定的图片，请将图片放入inputs/文件夹，并取消test.py中“单张测试”部分的注释。
+测试程序返回的结果是测试集的准确率。如果你想测试特定的图片，请将图片放入inputs/文件夹(如果没有，请创建一个)，并取消test.py中“单张测试”部分的注释。
 运行环境
 操作系统
 Windows 11
@@ -98,4 +133,3 @@ Torch Vision 0.20.1
 日志记录和可视化库
 Matplotlib 3.9.4
 TensorBoard 2.19.0
-
